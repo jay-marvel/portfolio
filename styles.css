@@ -98,16 +98,22 @@ section h2, .experience-card h3{
     cursor: pointer;
 }
 
-.experience-contents {
+.experience-contents, .project-contents {
     display: flex;
     flex-direction: column;
     gap: 4rem;
 }
 
-.experience-card {
+.experience-card, .project-card {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    
+}
+.experience-card {
     gap: 0.5rem;
+}
+.project-card {
+    gap: 1rem;
 }
 
 .tenure {
@@ -145,4 +151,59 @@ section h2, .experience-card h3{
 }
 .tag p {
     font-size: 0.8rem;
+}
+
+.project-image {
+    max-width: 200px;
+    overflow:hidden;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 16/9;
+    order: 2;
+    border-radius: 0.5rem;
+}
+
+.project-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.project-stat-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.project-archive-link {
+    position: relative;
+    color: var(--color-highlight);
+    text-decoration: none;
+    transition-duration: 200ms;
+    margin-right: auto;
+
+}
+.project-archive-link span {
+    transition-duration: 200ms;
+}
+
+.project-archive-link:hover span {
+    padding-left: 0.5rem;
+}
+
+.project-archive-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    bottom: 0;
+    background: transparent;
+    transition-duration: 200ms;
+
+} 
+
+.project-archive-link:hover::after {
+    background: var(--color-accent);
 }
