@@ -88,6 +88,25 @@ section h2, .experience-card h3{
     font-size: 1.1rem;
 }
 
+.sticky-header {
+    position: sticky;
+    top: 0;
+    padding: 1rem 0;
+}
+
+.sticky-header h2 {
+    z-index: 2;
+    position: relative;
+}
+
+.sticky-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #101A3199;
+    backdrop-filter: blur(5px);
+}
+
 .anchor-text {
     color: var(--color-highlight);
     text-decoration: none;
