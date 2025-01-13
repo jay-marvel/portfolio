@@ -361,8 +361,7 @@ footer p {
         top: 0;
         margin-left: auto;
         height: fit-content;
-        padding-bottom: 6rem;
-        
+        padding-bottom: 6rem; 
     }
     header h1 {
         font-size: 3rem;
@@ -375,13 +374,13 @@ footer p {
     header p {
         max-width: 300px;
     }
+
     nav {
         padding: 2rem 0;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
         flex: 1;
-        
     }
     nav a {
         font-size: 1rem;
